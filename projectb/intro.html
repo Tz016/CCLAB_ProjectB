@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CCLab Project</title>
+
+  <link rel="stylesheet" type="text/css" href="introstyle.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Ubuntu:wght@400;500&display=swap');
+    </style>
+  <!-- Uncomment the line below if you use audio. -->
+  <!-- <script src="libraries/p5.sound.min.js"></script> -->
+</head>
+
+<body>
+    <div class="container">
+    <div class="imgcontainer">
+    <img id="gallery-img" src="img1.jpg">
+    <div class="left-arrow">&#8249;</div>
+    <div class="right-arrow">&#8250;</div>
+</div>
+</div>
+<script>
+    const imgArray = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg"];
+    let currentImg = 0;
+
+    document.querySelector(".left-arrow").addEventListener("click", function() {
+        currentImg--;
+        if (currentImg < 0) {
+            currentImg = imgArray.length - 1;
+        }
+        document.getElementById("gallery-img").src = imgArray[currentImg];
+    });
+
+    document.querySelector(".right-arrow").addEventListener("click", function() {
+        currentImg++;
+        if (currentImg > imgArray.length - 1) {
+            currentImg = 0;
+        }
+        document.getElementById("gallery-img").src = imgArray[currentImg];
+    });
+</script>
+  <a id="page" href="index.html">GO TO MY WORK PAAAGE!!!</a>
+  <h1 id="head">Hiii! It's my Introduction Page!</h1>
+  <h1 id="head1">Introduction</h1>
+  <!-- the following div will contain the p5 canvas. -->
+
+  <!-- <div id="scroll-container" style="overflow-y: scroll; height: 200px;"> -->
+  </div>
+  <p id="description">
+    The inspiration is from Mulvey's "Visual Pleasure and Narrative Cinema".<br> 
+    In this text, she deconstructs the way how female and male characters bring the audience visual pleasure respectively – women in films are passive, being gazed at by the audience and by the men characters due to women's lack of penis, while men are active and are the “bearer of the look” (19) and the “mirror recognition” of the audience (20) -- by using the term “male gaze”.<br>
+    <a style="color:red" href="https://en.wikipedia.org/wiki/Mirror_stage">MIRROR STAGE</a><br>
+    <a style="color:red" href="https://www.britannica.com/science/Oedipus-complex">OEDIPUS COMPLEX</a>
+  </p>
+  <!-- the script tag below should always be at the bottom, right before the closing body tag -->
+
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Gallery Example</title>
+	<style>
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 500px;
+		}
+		.left-arrow, .right-arrow {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 50px;
+			height: 50px;
+			background-color: black;
+			color: white;
+			text-align: center;
+			font-size: 30px;
+			line-height: 50px;
+			cursor: pointer;
+		}
+		.left-arrow {
+			left: 0;
+		}
+		.right-arrow {
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img id="gallery-img" src="img1.jpg">
+		<div class="left-arrow">&#8249;</div>
+		<div class="right-arrow">&#8250;</div>
+	</div>
+	<script>
+		const imgArray = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg"];
+		let currentImg = 0;
+
+		document.querySelector(".left-arrow").addEventListener("click", function() {
+			currentImg--;
+			if (currentImg < 0) {
+				currentImg = imgArray.length - 1;
+			}
+			document.getElementById("gallery-img").src = imgArray[currentImg];
+		});
+
+		document.querySelector(".right-arrow").addEventListener("click", function() {
+			currentImg++;
+			if (currentImg > imgArray.length - 1) {
+				currentImg = 0;
+			}
+			document.getElementById("gallery-img").src = imgArray[currentImg];
+		});
+	</script>
+</body>
+</html>
+ -->
