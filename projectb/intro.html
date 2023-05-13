@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>CCLab Project</title>
+
+	<link rel="stylesheet" type="text/css" href="introstyle.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Ubuntu:wght@400;500&display=swap');
+	</style>
+	<!-- Uncomment the line below if you use audio. -->
+	<!-- <script src="libraries/p5.sound.min.js"></script> -->
+</head>
+
+<body>
+	<div class="container">
+		<div class="imgcontainer">
+			<img id="gallery-img" src="img1.jpg">
+			<div class="left-arrow">&#8249;</div>
+			<div class="right-arrow">&#8250;</div>
+		</div>
+	</div>
+
+
+	<h1 id="head">Hiii! It's my Introduction Page!</h1>
+	<h1 id="head1">Introduction</h1>
+	<!-- the following div will contain the p5 canvas. -->
+
+	<!-- <div id="scroll-container" style="overflow-y: scroll; height: 200px;"> -->
+	</div>
+	<div class="menu">
+		<p id="menu">MENU</p>
+		<a href="#content_topic">Text Content</a>
+		<a href="#abstract_topic">Abstract</a>
+		<a href="#work_topic">Inspiration Process</a>
+		<a href="#cite">Citation</a>
+	</div>
+	<div class="resource">
+		<p id="resource">RESOURCES</p>
+		<p>
+			<a href="https://en.wikipedia.org/wiki/Mirror_stage">MIRROR STAGE</a><br>
+			<a href="https://www.britannica.com/science/Oedipus-complex">OEDIPUS COMPLEX</a><br>
+			<a href="https://www.amherst.edu/system/files/media/1021/Laura%2520Mulvey,%2520Visual%2520Pleasure.pdf">VIEW
+				THE WHOLE TEXT</a>
+		</p>
+	</div>
+	<div class="description">
+		<p id="from">
+			The inspiration is from Mulvey's <em><a id="textname"
+					href="https://www.google.com/search?q=visual+pleasure+and+narrative+cinema&oq=Visual+Pleasure+and+Narrative+Cinema&aqs=chrome.0.0i355i512j46i512j69i59j0i512l3j69i60l2.844j0j4&sourceid=chrome&ie=UTF-8">"Visual
+					Pleasure and Narrative Cinema"</a></em>.
+		</p>
+		<h3 id="content_topic">Text Content</h3>
+		<p id="text">
+			In this text, Mulvey uses the psychoanalytic method to analyze how women and men characters in narrative
+			films bring the audience visual pleasure. She argues that female characters are the erotic object of the
+			gaze of the audience and the male characters. <br> <br>Due to the penis envy and castration anxiety
+			constructed in our patriarchal society, female characters can only take preoccupation with the re-enactment
+			of the original trauma and be objectified as a perfect product. The audience get pleasure from the female
+			characters through the fetish scopophilia. <br><br>While the audience mirror themselves onto the male
+			protagonists, seeing the male characters as a “more perfect, complete, more powerful ideal ego conceived in
+			the original moment of recognition in front of the mirror. The character in the story can make things happen
+			and control events better than the subject/spectator, just as the image in the mirror was more in control of
+			motor co-ordination” (20).
+			<br>
+		</p>
+		<h3 id="abstract_topic">Abstract</h3>
+		<p id="my_work">
+			In the Workpage, when the user says something, the page will convert the speech to text which will be shown on the screen in real-time, and then the page will say these words again in a system-generated female voice. I hope to use the text and the repeated words to create a sense of “mirroring your own speech”, which may be related to the audience mirroring themselves onto male characters in films.  But the system-generated female voice, which we are extremely familiar with due to the use in Siri and other AI, tends to be seen as very service-oriented. This is thoroughly opposed to the perfect, powerful, active role of male characters in films and is more similar to representative female roles in films (according to the “Visual Pleasure” this text). The aim is to make users feel weird and attracted to the patriarchal phenomenon analyzed in Mulvey’s text.
+<br><br>Because most people don’t know the text “Visual Pleasure and Narrative Cinema”, the first page is to introduce the text material I use. On this page, I put my understanding of the text, my inspiration process, and my project abstract. To help users explore the topic more, I also link some relative terms and add a resource box at the right of the page.
+
+		</p>
+		<h3 id="work_topic">Inspiration Process</h3>
+		<p id="inspire">
+			Once in the class (where this reading is class material and we were asked to write something about the male
+			gaze), a classmate asked that could she not use the visual material. The professor just turned the question
+			back that if she could combine the gaze with audio material then of course she could not use the visual
+			work. At that time I just thought it was impossible to combine gaze and visual pleasure with audio material.
+			<br><br>However, when I started to work on this CCLab project, facing a page to which I had already imported
+			a library which can real-time convert users’ words to text, those words just came to my mind. I found that I
+			would be delighted when I saw my words converted to string on the screen, so I guessed the reason for this
+			feeling perhaps was related to how people mirror themselves onto male characters to some extent – I mirrored
+			my audio to the text on the screen.
+		</p>
+		<h3 id="cite_topic">Citation</h3>
+		<p id="cite">
+			Laura Mulvey, Visual Pleasure and Narrative Cinema, Screen, Volume 16, Issue 3, Autumn 1975, Pages 6–18, https://doi.org/10.1093/screen/16.3.6
+			<br><br>Robert Doisneau, An Oblique Look, 1948
+			<br><br>J. J. Grandville, Venus at the Opera, 1844
+			<br><br>The River of No Return (1954)
+			<br><br>Rear Window (1954, dir. Alfred Hitchcock)
+			<br><br>Also thanks to the class "Gender and Sexuality in Modern Visual Arts" and Prof. HK. Most material is from this class.
+		</p>
+
+
+	</div>
+	<a id="page" href="index.html">GO TO MY WORK PAAAGE!!!</a>
+	<!-- the script tag below should always be at the bottom, right before the closing body tag -->
+
+	<script>
+		const imgArray = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg","img5.jpg","img6.jpg"];
+		let currentImg = 0;
+
+		document.querySelector(".left-arrow").addEventListener("click", function () {
+			currentImg--;
+			if (currentImg < 0) {
+				currentImg = imgArray.length - 1;
+			}
+			document.getElementById("gallery-img").src = imgArray[currentImg];
+		});
+
+		document.querySelector(".right-arrow").addEventListener("click", function () {
+			currentImg++;
+			if (currentImg > imgArray.length - 1) {
+				currentImg = 0;
+			}
+			document.getElementById("gallery-img").src = imgArray[currentImg];
+		});
+	</script>
+
+</body>
+
+</html>
