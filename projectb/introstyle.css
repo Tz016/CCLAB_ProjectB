@@ -78,7 +78,7 @@ html, body {
   .menu{
     position:fixed;
     left:80%;
-    top:10%;
+    top:9%;
     width:1000px;
     color:white;
     background-color: rgba(155, 155, 155, 0.236);
@@ -101,7 +101,7 @@ html, body {
   .resource {
     position:fixed;
     left:80%;
-    top:49%;
+    top:50%;
     width:1000px;
     color:white;
     background-color: rgba(155, 155, 155, 0.236);
@@ -207,6 +207,9 @@ html, body {
     font-size: 30px;
     line-height: 50px;
     cursor: pointer;
+}
+.left-arrow, .right-arrow:hover{
+  font-weight: bolder;
 }
 .left-arrow {
     left: 25%;
