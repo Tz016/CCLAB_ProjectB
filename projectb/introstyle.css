@@ -78,7 +78,7 @@ html, body {
   .menu{
     position:fixed;
     left:80%;
-    top:11%;
+    top:10%;
     width:1000px;
     color:white;
     background-color: rgba(155, 155, 155, 0.236);
@@ -101,7 +101,7 @@ html, body {
   .resource {
     position:fixed;
     left:80%;
-    top:48%;
+    top:49%;
     width:1000px;
     color:white;
     background-color: rgba(155, 155, 155, 0.236);
@@ -174,7 +174,6 @@ html, body {
   }
     #page:hover{
     color: red;
-    font-size: 110px;
     font-weight: bolder;
     transition: color 0.1s ease-in-out;
     text-shadow: 2px 2px 6px #630909;
