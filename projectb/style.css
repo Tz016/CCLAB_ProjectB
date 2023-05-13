@@ -10,13 +10,6 @@ html, body {
     background-color: black;
 
   }
-  a{
-    color:white;
-  }
-  a:hover{
-    color: red;
-    transition: color 1s ease-in-out;
-  }
   #myContainer {
     position: fixed;
     left: 0px;
@@ -47,7 +40,7 @@ html, body {
     color:rgb(243, 48, 48);
     left:30%;
     top:10%;
-    animation: fadeinout 2s ease-in-out;
+    animation: fadeinout 3s ease-in-out;
       opacity: 0;
       display: inline-block;
     font-family: 'Noto Sans JP', sans-serif;
@@ -60,7 +53,7 @@ html, body {
     color:rgb(243, 48, 48);
     left:3%;
     top:0%;
-    animation: fadein 2.5s linear;
+    animation: fadein 3s linear;
     display:inline-block;
     font-family: 'Noto Sans JP', sans-serif;
     font-family: 'Ubuntu', sans-serif;
@@ -84,9 +77,16 @@ html, body {
   #button{
     position: fixed;
     right:1%;
-    top:96%;
-    color:black;
-    background-color: antiquewhite;
+    top:94%;
+    color:white;
+    text-decoration: none;
+    animation: fadein 3s linear;
+    
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  #button:hover{
+    color:rgb(243, 48, 48);
   }
   
   
